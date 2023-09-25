@@ -16,7 +16,7 @@
       "function": {
         "testTodoLambda": {
           "deploymentBucketName": "amplify-awstest-dev-93938-deployment",
-          "s3Key": "amplify-builds/testTodoLambda-2f4f79694252542b7139-build.zip"
+          "s3Key": "amplify-builds/testTodoLambda-364833566d6366472b43-build.zip"
         }
       },
       "auth": {
