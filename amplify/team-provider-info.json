@@ -1,0 +1,36 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-awstest-dev-93938-authRole",
+      "UnauthRoleArn": "arn:aws:iam::013764397159:role/amplify-awstest-dev-93938-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::013764397159:role/amplify-awstest-dev-93938-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-awstest-dev-93938-deployment",
+      "UnauthRoleName": "amplify-awstest-dev-93938-unauthRole",
+      "StackName": "amplify-awstest-dev-93938",
+      "StackId": "arn:aws:cloudformation:eu-west-1:013764397159:stack/amplify-awstest-dev-93938/4c3d9ae0-5b6e-11ee-83f9-0671f63f6dff",
+      "AmplifyAppId": "dn95hnkihdkw8",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-awstest-dev-93938-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "function": {
+        "testTodoLambda": {
+          "deploymentBucketName": "amplify-awstest-dev-93938-deployment",
+          "s3Key": "amplify-builds/testTodoLambda-2f4f79694252542b7139-build.zip"
+        }
+      },
+      "auth": {
+        "awstest": {}
+      },
+      "api": {
+        "testRestAPI": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dn95hnkihdkw8",
+          "type": "cicd"
+        }
+      }
+    }
+  }
+}
