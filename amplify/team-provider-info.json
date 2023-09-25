@@ -16,7 +16,7 @@
       "function": {
         "testTodoLambda": {
           "deploymentBucketName": "amplify-awstest-dev-93938-deployment",
-          "s3Key": "amplify-builds/testTodoLambda-364833566d6366472b43-build.zip"
+          "s3Key": "amplify-builds/testTodoLambda-62672f542b5748773852-build.zip"
         }
       },
       "auth": {
@@ -30,6 +30,9 @@
           "appId": "dn95hnkihdkw8",
           "type": "cicd"
         }
+      },
+      "storage": {
+        "awsTestDB": {}
       }
     }
   }

@@ -1,0 +1,16 @@
+{
+  "resourceName": "awsTestDB",
+  "tableName": "countries",
+  "partitionKey": {
+    "fieldName": "name",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "population",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": [
+    "testTodoLambda"
+  ]
+}
