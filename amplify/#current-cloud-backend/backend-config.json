@@ -1,0 +1,75 @@
+{
+    "api": {
+        "testRestAPI": {
+            "dependsOn": [
+                {
+                    "attributes": [
+                        "Name",
+                        "Arn"
+                    ],
+                    "category": "function",
+                    "resourceName": "testTodoLambda"
+                }
+            ],
+            "providerPlugin": "awscloudformation",
+            "service": "API Gateway"
+        }
+    },
+    "auth": {
+        "awstest": {
+            "dependsOn": [],
+            "frontendAuthConfig": {
+                "mfaConfiguration": "OFF",
+                "mfaTypes": [
+                    "SMS"
+                ],
+                "passwordProtectionSettings": {
+                    "passwordPolicyCharacters": [],
+                    "passwordPolicyMinLength": 8
+                },
+                "signupAttributes": [
+                    "EMAIL"
+                ],
+                "socialProviders": [],
+                "usernameAttributes": [],
+                "verificationMechanisms": [
+                    "EMAIL"
+                ]
+            },
+            "providerPlugin": "awscloudformation",
+            "service": "Cognito",
+            "serviceType": "managed"
+        }
+    },
+    "function": {
+        "testTodoLambda": {
+            "build": true,
+            "providerPlugin": "awscloudformation",
+            "service": "Lambda"
+        }
+    },
+    "parameters": {
+        "AMPLIFY_function_testTodoLambda_deploymentBucketName": {
+            "usedBy": [
+                {
+                    "category": "function",
+                    "resourceName": "testTodoLambda"
+                }
+            ]
+        },
+        "AMPLIFY_function_testTodoLambda_s3Key": {
+            "usedBy": [
+                {
+                    "category": "function",
+                    "resourceName": "testTodoLambda"
+                }
+            ]
+        }
+    },
+    "hosting": {
+        "amplifyhosting": {
+            "service": "amplifyhosting",
+            "type": "cicd"
+        }
+    }
+}

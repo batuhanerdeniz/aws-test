@@ -1,0 +1,119 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-awstest-dev-93938-authRole",
+      "UnauthRoleArn": "arn:aws:iam::013764397159:role/amplify-awstest-dev-93938-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::013764397159:role/amplify-awstest-dev-93938-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-awstest-dev-93938-deployment",
+      "UnauthRoleName": "amplify-awstest-dev-93938-unauthRole",
+      "StackName": "amplify-awstest-dev-93938",
+      "StackId": "arn:aws:cloudformation:eu-west-1:013764397159:stack/amplify-awstest-dev-93938/4c3d9ae0-5b6e-11ee-83f9-0671f63f6dff",
+      "AmplifyAppId": "dn95hnkihdkw8",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-awstest-dev-93938-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    }
+  },
+  "function": {
+    "testTodoLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2023-09-25T06:45:54.194Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2023-09-25T06:45:55.471Z",
+      "distZipFilename": "testTodoLambda-2f4f79694252542b7139-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-awstest-dev-93938-deployment",
+        "s3Key": "amplify-builds/testTodoLambda-2f4f79694252542b7139-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-awstest-dev-93938-deployment/amplify-cfn-templates/function/testTodoLambda-cloudformation-template.json",
+        "logicalId": "functiontestTodoLambda"
+      },
+      "lastPushTimeStamp": "2023-09-25T07:02:48.240Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::013764397159:role/awstestLambdaRole7ae7ebc7-dev",
+        "Region": "eu-west-1",
+        "Arn": "arn:aws:lambda:eu-west-1:013764397159:function:testTodoLambda-dev",
+        "Name": "testTodoLambda-dev",
+        "LambdaExecutionRole": "awstestLambdaRole7ae7ebc7-dev"
+      },
+      "lastPushDirHash": "w64/9V8hi9Zi5Tx8+mdBAQBcu2g="
+    }
+  },
+  "auth": {
+    "awstest": {
+      "service": "Cognito",
+      "serviceType": "managed",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-awstest-dev-93938-deployment/amplify-cfn-templates/auth/awstest-cloudformation-template.json",
+        "logicalId": "authawstest"
+      },
+      "lastPushTimeStamp": "2023-09-25T07:02:48.242Z",
+      "output": {
+        "UserPoolId": "eu-west-1_lijd2JjIT",
+        "AppClientIDWeb": "84pceosfjge0vraiddqn9p69k",
+        "AppClientID": "6er50783gjqb7gg4t1ln5mhe2p",
+        "IdentityPoolId": "eu-west-1:9eb5ca4c-0619-46ae-80a9-9affdf2cb970",
+        "UserPoolArn": "arn:aws:cognito-idp:eu-west-1:013764397159:userpool/eu-west-1_lijd2JjIT",
+        "IdentityPoolName": "awstest_identitypool_f9e117b5__dev",
+        "UserPoolName": "awstest_userpool_f9e117b5"
+      },
+      "lastPushDirHash": "tM6H7p8SKByVhLu+xnRa7kz6P1w="
+    }
+  },
+  "api": {
+    "testRestAPI": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "testTodoLambda",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-awstest-dev-93938-deployment/amplify-cfn-templates/api/testRestAPI-cloudformation-template.json",
+        "logicalId": "apitestRestAPI"
+      },
+      "lastPushTimeStamp": "2023-09-25T07:02:48.244Z",
+      "output": {
+        "ApiName": "testRestAPI",
+        "RootUrl": "https://p1g34nuwe2.execute-api.eu-west-1.amazonaws.com/dev",
+        "ApiId": "p1g34nuwe2"
+      },
+      "lastPushDirHash": "1GWHv4z6sKI6+Ae3Y0MNjSH/VSU="
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "type": "cicd",
+      "lastPushTimeStamp": "2023-09-25T07:00:44.473Z"
+    }
+  }
+}
